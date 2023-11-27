@@ -1,0 +1,11 @@
+{
+  "General": {
+    "Version": "/api/"
+  },
+  "APIS": {
+    "ApiAccount": "Account/",
+    "ApiTask": "Task/",
+    "ApiUser": "User/",
+    "ApiUserChgPwd": "User/ChangePassword"
+  }
+}

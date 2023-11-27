@@ -1,0 +1,95 @@
+.bg-plum-plate {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    135deg,
+    #5dbb63 0%,
+    #00eeff 100%
+  ) !important;
+}
+
+.container-log {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 498px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px 20px 15px 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.title-fir {
+  font-size: 21.8px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #9fa0a2;
+}
+.title-sec {
+  color: #808080fc;
+  font-family: system-ui;
+  font-weight: 100;
+  font-size: 17.6px;
+}
+
+.divider {
+  background-color: #80808038;
+  height: 1px;
+}
+
+.no-count {
+  color: gray;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+/* You can add global styles to this file, and also import other style files */
+a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: #00a76a !important; /* Usa el color heredado del contenedor */
+}
+a:hover {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: #00a76a !important; /* Usa el color heredado del contenedor */
+}
+a:active {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: #00a76a !important; /* Usa el color heredado del contenedor */
+}
+
+.btn-primary {
+  --bs-btn-color: hsl(0, 0%, 100%);
+  --bs-btn-bg: #00a76a;
+  --bs-btn-border-color: #00a76a;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #00a76a;
+  --bs-btn-hover-border-color: #00a76a;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #00a76a;
+  --bs-btn-active-border-color: #00a76a;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #00a76a;
+  --bs-btn-disabled-border-color: #00a76a;
+}
+
+.btn-primary:active {
+  transition: 100ms;
+  --bs-btn-padding-x: 0.85rem;
+  --bs-btn-padding-y: 0.475rem;
+}
+.form-check-input:checked {
+  background-color: #00a76a;
+  border-color: #00a76a;
+}
+
+.copyright {
+  left: calc(49vw - 115px);
+  z-index: 99;
+  position: absolute;
+  bottom: 3vh;
+}

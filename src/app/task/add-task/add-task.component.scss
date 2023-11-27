@@ -1,0 +1,27 @@
+.title {
+  width: 320px;
+  text-align: center;
+  color: #00bbff;
+  font-size: xx-large;
+  font-weight: 900;
+  margin-top: 18px;
+}
+.conten {
+  height: 320px;
+  width: 320px;
+}
+
+.dataConten {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.buttonContent {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  bottom: 10px;
+  position: absolute;
+  margin-left: 52px;
+}

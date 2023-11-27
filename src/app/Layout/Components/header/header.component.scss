@@ -1,0 +1,136 @@
+.header {
+  height: 60px;
+  width: 100vw;
+  background-image: linear-gradient(
+    180deg,
+    #2af598 0%,
+    #009efd 100%
+  ) !important;
+}
+
+.logo {
+  top: 1px;
+  left: 11px;
+  z-index: 999;
+  position: absolute;
+  height: 10vh;
+  position: absolute;
+}
+
+.profile {
+  margin-top: 5px;
+  height: 50px;
+  position: absolute;
+  right: 172px;
+  border-radius: 60px;
+  cursor: pointer;
+}
+.arrow {
+  content: url(../../../../assets/icons/arrow-down-svgrepo-com.svg);
+  width: 15px;
+  height: 15px;
+  margin-top: 23px;
+  right: 15px;
+  position: absolute;
+  cursor: pointer;
+}
+.menu-content {
+  content: url(../../../../assets/icons/menu-hamburger-svgrepo-com.svg);
+  width: 49px;
+  height: 36px;
+  margin-top: 12px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.divider {
+  height: 40px;
+  width: 1px;
+  background-color: #ffffff69;
+  margin-top: 10px;
+  position: absolute;
+  right: 230px;
+}
+.username {
+  width: 130px;
+  color: white;
+  position: absolute;
+  right: 33px;
+  font-weight: 900;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.contentOption {
+  width: 239px;
+  height: 200px;
+  background-color: white;
+  position: absolute;
+  right: 19px;
+  top: 76px;
+  border-radius: 9px;
+  z-index: 99;
+}
+.headerOption {
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(rgb(0 255 148 / 36%), rgb(0 52 97)),
+    url(../../../../assets/city3.jpg);
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  border-radius: 10px;
+  background-size: contain;
+  display: flex;
+  justify-content: space-between;
+}
+.headerImg {
+  border-radius: 60px;
+  width: 40px;
+  margin-left: 8px;
+  height: 40px;
+  margin-top: 4px;
+}
+
+.optionText {
+  text-align: end;
+  margin-right: 13px;
+  margin-top: 5px;
+}
+.dataOption {
+  color: #00a49eb0;
+  margin-top: 10px;
+  text-align: left;
+  margin-right: 10px;
+  font-size: medium;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.itemOption {
+  margin-top: 15px;
+}
+.dividerOption {
+  background-color: #00ecff40;
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+}
+.footerOption {
+  text-align: end;
+  height: 71px;
+  margin-top: 5px;
+  margin-right: 3px;
+}
+.signOff {
+  background-image: linear-gradient(
+    275deg,
+    #2af598 0%,
+    #009efd 100%
+  ) !important;
+  color: white;
+  border: none;
+  border-radius: 21px;
+  padding: 5px;
+  font-weight: 600;
+}

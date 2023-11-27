@@ -1,0 +1,102 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Cargando...</p>
+</ngx-spinner>
+<div class="bg-plum-plate container-log">
+  <div class="shadow content">
+    <div class="h5 text-center">
+      <h4 class="mt-2">
+        <div class="title-fir">Bienvenido de nuevo,</div>
+        <span class="title-sec"
+          >Inicie sesión en su cuenta a continuación.</span
+        >
+      </h4>
+    </div>
+    <form [formGroup]="user" (ngSubmit)="login()">
+      <div class="mb-3 mt-4">
+        <div>
+          <input
+            formControlName="email"
+            type="email"
+            placeholder="Enter email..."
+            required="required"
+            class="form-control"
+          />
+          <span
+            class="text-danger ml-2"
+            *ngIf="
+              user.get('email').hasError('required') &&
+              user.get('email').touched
+            "
+          >
+            El email <strong>es requerido</strong>
+          </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div>
+          <input
+            formControlName="password"
+            type="password"
+            placeholder="Enter password..."
+            required="required"
+            class="form-control"
+          />
+
+          <span
+            class="text-danger ml-2"
+            *ngIf="
+              user.get('password').hasError('required') &&
+              user.get('password').touched
+            "
+          >
+            La contraseña <strong>es requerida</strong>
+          </span>
+        </div>
+      </div>
+      <div class="custom-control custom-checkbox form-check">
+        <input
+          type="checkbox"
+          name="check"
+          autocomplete="off"
+          class="form-check-input"
+          value="true"
+        />
+        <label for="exampleCheck" class="form-label form-check-label">
+          Mantenme conectado
+        </label>
+      </div>
+      <div class="divider"></div>
+      <h6 class="mb-0 no-count mt-3" style="font-size: 15px">
+        ¿Sin cuenta?
+        <a routerLink="/signup" class="text-primary">Regístrate ahora</a>
+      </h6>
+      <div class="divider mb-3 mt-3"></div>
+
+      <div class="modal-footer">
+        <div class="float-start">
+          <a routerLink="/forgot" class="btn-lg btn btn-link"
+            >Recuperar contraseña</a
+          >
+        </div>
+        <div class="float-end">
+          <button
+            type="submit"
+            class="btn btn-primary btn"
+            [disabled]="user.invalid"
+          >
+            Iniciar sesión en el panel
+          </button>
+        </div>
+      </div>
+      <div
+        class="text-center text-white opacity-8 mt-5 copyright"
+        style="position: absolute"
+      ></div>
+    </form>
+  </div>
+</div>

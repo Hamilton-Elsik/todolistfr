@@ -1,0 +1,193 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Cargando...</p>
+</ngx-spinner>
+<div class="bg-plum-plate container-log">
+  <div class="shadow content">
+    <div class="h5 text-start">
+      <h4 class="mt-2">
+        <div class="title-fir">Bienvenido,</div>
+        <div class="title-sec">
+          Sólo te llevará unos
+          <span style="color: #1ca900; font-weight: 400">segundos</span> Crea tu
+          cuenta
+        </div>
+      </h4>
+    </div>
+    <form [formGroup]="register" (ngSubmit)="registerUser()">
+      <div class="mb-3 mt-3 row">
+        <div class="col-6">
+          <input
+            formControlName="firstName"
+            type="text"
+            placeholder="Nombre"
+            required="required"
+            class="form-control"
+          />
+          <span
+            class="text-danger ml-2"
+            *ngIf="
+              register.get('firstName').hasError('required') &&
+              register.get('firstName').touched
+            "
+          >
+            El nombre <strong>es requerido</strong>
+          </span>
+        </div>
+        <div class="col-6">
+          <input
+            formControlName="lastName"
+            type="text"
+            placeholder="Apellido"
+            required="required"
+            class="form-control"
+          />
+          <span
+            class="text-danger ml-2"
+            *ngIf="
+              register.get('lastName').hasError('required') &&
+              register.get('lastName').touched
+            "
+          >
+            El apellido <strong>es requerido</strong>
+          </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div>
+          <input
+            formControlName="phoneNumber"
+            type="text"
+            [autocomplete]="false"
+            placeholder="Número de teléfono"
+            required="required"
+            class="form-control"
+          />
+          <span
+            class="text-danger ml-2"
+            *ngIf="
+              register.get('phoneNumber').hasError('required') &&
+              register.get('phoneNumber').touched
+            "
+          >
+            El número de teléfono <strong>es requerido</strong>
+          </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div>
+          <input
+            formControlName="email"
+            type="email"
+            placeholder="Email..."
+            required="required"
+            class="form-control"
+            autocomplete="false"
+          />
+          <span
+            class="text-danger ml-2"
+            *ngIf="
+              register.get('email').hasError('required') &&
+              register.get('email').touched
+            "
+          >
+            El email <strong>es requerido</strong>
+          </span>
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <div class="col-6">
+          <input
+            formControlName="password"
+            type="password"
+            placeholder="Password..."
+            required="required"
+            autocomplete="false"
+            class="form-control"
+          />
+          <span
+            class="text-danger ml-2"
+            *ngIf="
+              register.get('password').hasError('required') &&
+              register.get('password').touched
+            "
+          >
+            La contraseña <strong>es requerida</strong>
+          </span>
+          <span
+            class="text-danger ml-2"
+            *ngIf="
+              register.get('password').hasError('minlength') &&
+              register.get('password').touched
+            "
+          >
+            La contraseña debe tener
+            <strong
+              >al menos 8 caracteres en mayúsculas, números y caracteres
+              especiales</strong
+            >
+          </span>
+        </div>
+        <div class="col-6">
+          <input
+            formControlName="confirmPassword"
+            type="password"
+            autocomplete="false"
+            placeholder="Confirmar Password..."
+            required="required"
+            class="form-control"
+          />
+          <span class="text-danger ml-2" *ngIf="register.hasError('notSame')">
+            Contraseña <strong>distinta</strong>
+          </span>
+        </div>
+      </div>
+      <div class="custom-control custom-checkbox form-check">
+        <input
+          type="checkbox"
+          name="check"
+          autocomplete="off"
+          class="form-check-input"
+          value="true"
+        />
+        <div
+          for="exampleCheck"
+          class="form-label form-check-label"
+          style="color: gray"
+        >
+          Acepta nuestros
+          <span style="color: #1ca900; font-weight: 400; cursor: pointer"
+            >Términos y Condiciones.</span
+          >
+        </div>
+      </div>
+      <div class="divider"></div>
+      <h6 class="mb-0 no-count mt-3">
+        ¿Ya tienes una cuenta?
+        <a routerLink="/UserPages" class="text-primary">Iniciar sesión</a> |
+        <a routerLink="/UserPages/forgot" class="text-primary"
+          >Recuperar contraseña</a
+        >
+      </h6>
+      <div class="divider mb-3 mt-3"></div>
+
+      <div class="modal-footer">
+        <div class="float-end">
+          <button
+            type="submit"
+            class="btn btn-primary btn"
+            [disabled]="register.invalid"
+          >
+            Crear una cuenta
+          </button>
+        </div>
+      </div>
+      <div class="text-center text-white opacity-8 mt-5 copyright"></div>
+    </form>
+  </div>
+</div>
